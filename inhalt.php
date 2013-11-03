@@ -1,5 +1,5 @@
 <?php
-	require_once("database.connect.php");
+	require_once("database_connect.php");
 	include("numbers.php");
 	include("content_filler.php");
 ?>
@@ -8,7 +8,7 @@
 <html>
 <head>
 	<title><?php echo "$heading"?></title>
-	<link rel="stylesheet" href="GenericStyle v0.2.1.css" type="text/css">
+	<link rel="stylesheet" href="GenericStyle.css" type="text/css">
 </head>
 <body>
 	<header>
