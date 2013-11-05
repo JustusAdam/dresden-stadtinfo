@@ -1,0 +1,39 @@
+STYLEGUIDE
+
+//Screenshot
+- Startseite
+- Map
+- POI-Seite
+
+
+//1. Sprache
+- verwendete Sprachen: 
+-- HTML(Grundgerüst), 
+-- CSS (Layoutgestaltung), 
+-- JavaScript (Interaktivität, 
+-- Karten-Animationen), 
+-- PHP/MySQL (Einbindung der Informationen in das Layout), 
+-- SVG (Karte)
+
+
+
+//2. Seitenformatierung
+- Schriftart: Verdana
+
+- Textausrichtung: links
+
+- Überschriften: 
+-- Oberüberschrift :: 20pt
+-- Unterüberschrift :: 14pt
+-- Text :: 12pt
+
+- Listen
+-- Quadrat als Punktierung
+
+
+//3. Visuelle Aspekte des Quellcodes
+- 3 CSS-Dateien: Normales Design, Barrierefreies Design, Druck
+- 4 HTML-Seiten: Startseite, Karte, Impressum, POI
+
+
+//4. Farbenorientierung
