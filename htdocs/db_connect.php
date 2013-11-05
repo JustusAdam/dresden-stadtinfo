@@ -3,4 +3,5 @@
 	if(!$db){
 		exit("Error: ".mysqli_connect_error());
 	}
+	
 ?>
