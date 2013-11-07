@@ -18,12 +18,16 @@
 	border-width: 0px 1px;
 	border-style: solid;
 	border-color: #FFA6A6;
+	text-align: center;
+	line-height:60px;
+	vertical-align: middle;
 }
 #StartButton{
+	width:130px;
 	color:white;
-	padding: 15px 30px 0px 30px;
+	padding: 0px;
 	float: left;
-	height: 45px;
+	height: 60px;
 	border-width: 0px 1px 0px 0px;
 	border-style:solid;
 	border-color:#FFA6A6;
@@ -34,7 +38,7 @@
 }
 #UpButtonContainer{
 	float: right;
-	width: 123px;
+	width: 130px;
 	height: 60px;
 }
 #Up{
@@ -42,17 +46,17 @@
 	border-style:solid;
 	border-color:#FFA6A6;
 	float: right;
-	height: 45px;
-	padding: 15px 25px 0px 25px;
+	height: 60px;
+	width: 60px;
 }
 #Up:hover{
 	cursor:pointer;
 }
 #Title{
-	width:753px;
+	width:738px;
 	float: left;
-	height: 45px;
-	padding-top: 15px;
+	/*height: 45px;
+	padding-top: 15px;*/
 }
 .BigBox1{
 	float:left;

@@ -17,11 +17,14 @@
 	border-width: 0px 1px;
 	border-style: solid;
 	border-color: #FFA6A6;
+	text-align: center;
+	line-height:60px;
+	vertical-align: middle;
 }
 #StartButton{
-	padding: 15px 30px 0px 30px;
+	width:130px;
 	float: left;
-	height: 45px;
+	height: 60px;
 	border-width: 0px 1px 0px 0px;
 	border-style:solid;
 	border-color:#FFA6A6;
@@ -33,7 +36,7 @@
 }
 #UpButtonContainer{
 	float: right;
-	width: 129px;
+	width: 130px;
 	height: 60px;
 }
 #Up{
@@ -41,17 +44,16 @@
 	border-style:solid;
 	border-color:#FFA6A6;
 	float: right;
-	height: 45px;
-	padding: 15px 25px 0px 25px;
+	height: 60px;
+	width: 60px;
 }
 #Up:hover{
 	cursor:pointer;
 }
 #Title{
-	width:742px;
+	width:738px;
 	float: left;
-	height: 45px;
-	padding-top: 15px;
+	height: 60;
 }
 header{
 	background-color: #E5462D;
