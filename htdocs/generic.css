@@ -10,7 +10,7 @@
 	top: 60px;
 	z-index: 3;
 }
-#HeaderContent{
+.HeaderContent{
 	width: 1000px;
 	height: 60px;
 	margin-left: auto;
@@ -30,6 +30,7 @@
 }
 #StartButton:hover{
 	cursor:pointer;
+	text-decoration:underline;
 }
 #UpButtonContainer{
 	float: right;
@@ -117,4 +118,16 @@ a{
 .List1{
 	margin: 2%;
 }
-
+footer{
+	width: 100%;
+	height: 60px;
+	background-color: #E5462D;
+	text-align: center;
+	position:relative;
+	top:60px;
+}
+#FooterText{
+	font-size:10pt;
+	vertical-align:middle;
+	line-height: 60px;
+}

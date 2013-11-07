@@ -12,7 +12,7 @@
 </head>
 <body>
 	<header>
-		<div id="HeaderContent">
+		<div class="HeaderContent">
 			<div id="StartButton" onclick="document.location.href='index.html'">
 				Start
 			</div>
@@ -62,5 +62,10 @@
 		</div>
 		
 	</div>
+	<footer>
+		<div class="HeaderContent" id="FooterText">
+			&copy;2013 Justus Adam, Jens Wettlaufer, Adrian Lieber, Peter Klausing
+		</div>
+	</footer>
 </body>
 </html>
