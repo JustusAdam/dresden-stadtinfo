@@ -1,0 +1,50 @@
+@CHARSET "ISO-8859-1";
+
+#Global{
+	height: 1200px;
+}
+.BigBox1{
+	float:left;
+	width: 92%;
+	height: 400px;
+	background-color: #E6E6FA;
+	margin: 2%;
+	color: #3385FF;
+	padding: 0% 2%
+}
+.BigBox2{
+	float:right;
+	width: 73%;
+	height: 300px;
+	background-color: #E6E6FA;
+	margin: 20px;
+	padding: 0px 20px;
+	color: #3385FF;
+}
+.SmallBox1{
+	float: left;
+	width: 39%;
+	height: 400px;
+	margin-left: 2%;
+	background-color: #3385FF;
+	padding: 1% 4%;
+	color:white;
+	
+}
+.SmallBox2{
+	float: left;
+	width: 30%;
+	height: 150px;
+	margin-left: 2%;
+	background-color: #3385FF;
+	padding: 1% 4%;
+	color:white;
+}
+.SmallBoxContainer{
+	width: 98%;
+	border: 2px dotted black;
+	margin: 1%;
+}
+.List1{
+	margin: 2%;
+}
