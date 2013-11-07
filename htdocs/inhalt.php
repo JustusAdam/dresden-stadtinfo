@@ -13,8 +13,8 @@
 <body>
 	<header>
 		<div id="HeaderContent">
-			<div id="StartButton">
-				<a href="index.html" style="color:white;">Start</a>
+			<div id="StartButton" onclick="document.location.href='index.html'">
+				Start
 			</div>
 			
 			<div id="Title"> 
@@ -24,8 +24,8 @@
 			</div>
 			
 			<div id="UpButtonContainer">
-				<div id="Up">
-					<a href="#" style="color:white;">&#x21E7</a>
+				<div id="Up" onclick="document.location.href='#'">
+					&#x21E7
 				</div>
 			</div>
 		</div>

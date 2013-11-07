@@ -7,10 +7,10 @@
 		case("so"):
 			$id = "2";
 			break;
-		case("bw"):
+		case("tu"):
 			$id = "3";
 			break;
-		case("tbd"):
+		case("bw"):
 			$id = "4";
 			break;
 		case("gg"):

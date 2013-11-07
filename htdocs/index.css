@@ -25,14 +25,29 @@
 	border-width: 0px 1px 0px 0px;
 	border-style:solid;
 	border-color:#FFA6A6;
+	color:white;
+}
+#StartButton:hover{
+	cursor:pointer;
 }
 #UpButtonContainer{
 	float: right;
-	width: 123px;
+	width: 129px;
 	height: 60px;
 }
+#Up{
+	border-width: 0px 0px 0px 1px;
+	border-style:solid;
+	border-color:#FFA6A6;
+	float: right;
+	height: 45px;
+	padding: 15px 25px 0px 25px;
+}
+#Up:hover{
+	cursor:pointer;
+}
 #Title{
-	width:753px;
+	width:742px;
 	float: left;
 	height: 45px;
 	padding-top: 15px;
@@ -71,14 +86,14 @@ body{
 	font-weight: bold;
 	font-size: 14pt;
 }
-a{
-	text-decoration: none;
-	color:#595959;
-}
 .SmallBox1{
 	float: left;
 	width: 47%;
 	height: 250px;
 	margin:  20px 0px 0px 2%;
 	background-color: #E6E6E6;
+	color:#595959;
 	}
+.SmallBox1:hover{
+	cursor:pointer;
+}
