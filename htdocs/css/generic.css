@@ -82,3 +82,7 @@ footer{
 	vertical-align:middle;
 	line-height: 60px;
 }
+.link:hover{
+	text-decoration:underline;
+	cursor:pointer;
+}
