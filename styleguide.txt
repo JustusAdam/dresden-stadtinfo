@@ -1,17 +1,13 @@
-STYLEGUIDE
-
-//Screenshot
-- Startseite
-- Map
-- POI-Seite
+Styleguide zum EMI-Projekt "Stadtführer Dresden"
+---- Adrian, Jens, Justus, Peter & ... ----
+///////////////////////////////////////////////////
 
 
 //1. Sprache
 - verwendete Sprachen: 
 -- HTML(Grundgerüst), 
 -- CSS (Layoutgestaltung), 
--- JavaScript (Interaktivität, 
--- Karten-Animationen), 
+-- JavaScript (Interaktivität, Karten-Animationen), 
 -- PHP/MySQL (Einbindung der Informationen in das Layout), 
 -- SVG (Karte)
 
@@ -37,3 +33,7 @@ STYLEGUIDE
 
 
 //4. Farbenorientierung
+- Hintergrund: #ffffff (weiß)
+- Header: #E5462D (leuchtendes rot-orange)
+- Body: #F5F5F0 (Abgrenzung des Body durch "weichere" Hintergrundfarbe)
+- Schriftfarbe: #ffffff (weiß)
