@@ -24,6 +24,37 @@
 	<script type="text/javascript" src="tom.js"></script> 
 	<!-- Nicht vergessen das CSS mitkopieren!-->
 	
+	<!-- jQuery-Einbindung --><script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<!-- Slide-Einbindung --><script type="text/javascript" src="jquery.slides.js"></script>
+	
+	<!-- Animations-Methode -->
+	<script type="text/javascript">
+		(function($) {
+			$(function() {
+				$(".myElement").slides({
+					vertical:false,
+					resizable:false,
+					active:0,
+					transitionSpeed: 400, //Animations-Zeit in Millisekunden
+					stayOpen: true,
+					keyEvents:true,
+					classes:{
+						active:"gSAactive",
+						vertical:"gSVertical",
+						horizontal:"gSHorizontal",
+						slide:"gSSlide",
+						deactivating:"gSDeactivating",
+						positionActive:"gSPositionActive"
+					},
+					
+					limits : {
+						max: 400 //Breite der einzelnen Bilder
+					},
+				});
+			});
+		})(jQuery); 							
+	</script>
+	
 	<script type="text/javascript"> 
 
 	//<![CDATA[
@@ -124,8 +155,16 @@
 		</div>
 		
 		<div class="BigBox2">
-		
-		<h3></h3>
+			<div class="exampleWrapper">
+				<!-- Bildergallerie-div -->
+				<div class="myElement greenishSlides gsHorizontal">
+					<div class="gsSlide left gsActive" style="background-color: green;"><!-- php-Code für Bild-Einbindung => 'style' dann entfernen--></div>
+					<div class="gsSlide left gsActive" style="background-color: black;"></div>
+					<div class="gsSlide left gsActive" style="background-color: purple;"></div>
+					<div class="gsSlide left gsActive" style="background-color: pink;"></div>
+					<div class="gsSlide left gsActive" style="background-color: orange;"></div>
+				</div>
+			</div>
 		</div>
 		
 	</div>

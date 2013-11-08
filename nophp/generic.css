@@ -81,15 +81,24 @@
 	box-shadow: 2px -2px 5px #BBBBBB;	
 }
 
-
+/* Bildergallerie */
+.myElement {
+	width: 100%;	/* Breite der Bildergallerie	*/		
+} 			
+.gsSlide {
+	outline:1px solid #F5F5F0; /* Rahmen um die Bilder */
+}
+.exampleWrapper{
+	position: relative;
+}
 
 .BigBox2{
-	float:right;
+	float:left;
 	width: 73%;
 	height: 300px;
 	background-color: #E6E6FA;
 	margin: 20px;
-	padding: 0px 20px;
+	/* padding: 0px 20px; */
 	color: #3385FF;
 }
 .SmallBox1{
@@ -138,4 +147,3 @@ a{
 .List1{
 	margin: 2%;
 }
-
