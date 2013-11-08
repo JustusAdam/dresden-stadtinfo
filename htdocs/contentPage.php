@@ -8,7 +8,8 @@
 <html>
 <head>
 	<title><?php echo "$heading"?></title>
-	<link rel="stylesheet" href="generic.css" type="text/css">
+	<link rel="stylesheet" href="./css/generic.css" type="text/css">
+	<link rel="stylesheet" href="./css/contentPage.css" type="text/css">
 </head>
 <body>
 	<header>
