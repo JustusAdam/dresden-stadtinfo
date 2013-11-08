@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 
+<!-- Durchgeführte Schritte zur Einbindung der Karte:
+		0. Datei tom.js ins Verzeichnis geladen 
+		1. html = <div id="map"> in BigBox1 => generic.css = #map
+		2. ID map-c für den Copyright-Text auf der Karte
+		3. drei Skripts über src= eingebunden
+		4. ein CDATA-JavaScript in den head geschrieben (Darf, glaube ich, nicht ausgelagert werden!)
+		5. <body onload="drawmap();">
+-->
+<!-- Weitere Aufgaben
+		1. Routenberechnung innerhalb der Karte
+		2. verlinktes Popup
+		3. gleichzeitig alle anderen Marker, aber ohne Popup, auf den POIs gesetzt
+-->
+
 <html>
 <head>
 	<title>for development only</title>
 	<link rel="stylesheet" href="generic.css" type="text/css">
-	<!-- Nicht vergessen das css mit kopieren!-->
+	
+	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
+	<script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
+	<script type="text/javascript" src="tom.js"></script> 
+	<!-- Nicht vergessen das CSS mitkopieren!-->
+	
+	<script type="text/javascript"> 
+
+	//<![CDATA[
+
+	var map;
+	var layer_mapnik;
+	var layer_tah;
+	var layer_markers;
+
+	function drawmap() {
+		// Popup und Popuptext mit evtl. Grafik ==> müssen wir noch sorgfältig bearbeiten!!!
+		var popuptext="<font color=\"black\"><b>Frauenkirche<br>01067 Dresden</b></font>";
+
+		OpenLayers.Lang.setCode('de');
+		
+		// Position und Zoomstufe der Karte ==> Sollte Position des Markers (s.u.) entsprechen (findet man in Wikipedia rechts oben) 
+		var lon = 13.741575;
+		var lat = 51.051883;
+		var zoom = 15;  //15 ist gut!
+
+		map = new OpenLayers.Map('map', {
+			projection: new OpenLayers.Projection("EPSG:900913"),
+			displayProjection: new OpenLayers.Projection("EPSG:4326"),
+			controls: [
+				new OpenLayers.Control.Navigation(),
+				new OpenLayers.Control.LayerSwitcher(),
+				new OpenLayers.Control.PanZoomBar()],
+			maxExtent:
+				new OpenLayers.Bounds(-20037508.34,-20037508.34,
+										20037508.34, 20037508.34),
+			numZoomLevels: 18,
+			maxResolution: 156543,
+			units: 'meters'
+		});
+
+		layer_mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+		layer_markers = new OpenLayers.Layer.Markers("Address", { projection: new OpenLayers.Projection("EPSG:4326"), 
+													  visibility: true, displayInLayerSwitcher: false });
+
+		map.addLayers([layer_mapnik, layer_markers]);
+		jumpTo(lon, lat, zoom);
+	 
+		// Position des Markers ==> Sollte Position der Karte entsprechen
+		addMarker(layer_markers, 13.741575, 51.051883, popuptext);
+
+	}
+
+	//]]>
+		</script>
+		<noscript>Die Karte kann nicht angezeigt werden, da JavaScript nicht installiert oder oder ausgeschaltet ist.</noscript>
+		
 </head>
-<body>
+<body onload="drawmap();">
 	<header>
 		<div id="HeaderContent">
 			<div id="StartButton" onclick="document.location.href='index.html'">
@@ -27,10 +97,9 @@
 	<div id="Global">
 		
 		<div class="BigBox1">
-		
-		<h1>Karte hier.</h1>
-		
-		
+			<div id="map"></div>
+			<div id="map-c">&copy; <a class="c" href="http://www.openstreetmap.org/copyright">OpenStreetMap &amp; Mitwirkende</a>
+			</div>
 		</div>
 		
 		<div id="SmallBoxContainer">

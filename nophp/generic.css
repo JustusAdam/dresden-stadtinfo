@@ -61,8 +61,28 @@
 	background-color: #E6E6FA;
 	margin: 2%;
 	color: #3385FF;
-	padding: 0% 2%
+	
 }
+
+#map { /* Karteneinbindungs-Formatierungen */
+  height: 400px;
+  width: 100%; 
+  
+}
+
+#map-c { /* Copyright auf der Karte links unten */
+	background-color: white;
+	opacity: 0.7; filter:Alpha(Opacity=50); /* Transparenz des Hintergrunds */
+	position: absolute;
+	padding: 1px 2px;
+	margin-top: -18px;
+	z-index: 1000; /* = Vordergrund */
+	font-size: 10pt;
+	box-shadow: 2px -2px 5px #BBBBBB;	
+}
+
+
+
 .BigBox2{
 	float:right;
 	width: 73%;
