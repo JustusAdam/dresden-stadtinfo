@@ -56,7 +56,7 @@
 }
 .BigBox1{
 	float:left;
-	width: 92%;
+	width: 96%;
 	height: 400px;
 	background-color: #E6E6FA;
 	margin: 2%;
@@ -93,7 +93,7 @@
 }
 
 .BigBox2{
-	float:left;
+	float:right;
 	width: 73%;
 	height: 300px;
 	background-color: #E6E6FA;
