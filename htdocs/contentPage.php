@@ -1,7 +1,5 @@
 <?php
-	require_once("db_connect.php");
 	include("numbers.php");
-	include("content_filler.php");
 ?>
 <!DOCTYPE html>
 
