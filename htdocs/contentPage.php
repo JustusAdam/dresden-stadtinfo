@@ -11,7 +11,7 @@
 	
 	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
 	<script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
-	<script type="text/javascript" src="./js/tom.js"></script> 
+	<script type="text/javascript" src="js/tom.js"></script> 
 		
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.slides.js"></script>

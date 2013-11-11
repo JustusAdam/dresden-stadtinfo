@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 #Global{
-	height: 1200px;
+	height: 1240px;
 }
 .BigBox1{
 	float:left;
@@ -17,7 +17,7 @@
 	height: 300px;
 	background-color: #E6E6FA;
 	margin: 20px;
-	padding: 0px 20px;
+	padding: 20px 20px;
 	color: #3385FF;
 }
 .SmallBox1{
