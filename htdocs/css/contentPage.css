@@ -28,7 +28,7 @@
 	background-color: #3385FF;
 	padding: 1% 4%;
 	color:white;
-	
+	overflow: scroll;
 }
 .SmallBox2{
 	float: left;
