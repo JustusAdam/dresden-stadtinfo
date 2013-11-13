@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+.BigBox1{
+	float:left;
+	width: 96%;
+	height: 400px;
+	/*background-color: #E6E6FA;*/
+	margin: 2%;
+	color: #3385FF;
+	z-index: 4;
+}
+#Global{
+	height:730px;
+}
+#map { /* Karteneinbindungs-Formatierungen */
+  height: 700px;
+  width: 100%; 
+  
+}
+
+#map-c { /* Copyright auf der Karte links unten */
+	background-color: white;
+	opacity: 0.7; filter:Alpha(Opacity=50); /* Transparenz des Hintergrunds */
+	position: absolute;
+	padding: 1px 2px;
+	margin-top: -18px;
+	z-index: 1000; /* = Vordergrund */
+	font-size: 10pt;
+	box-shadow: 2px -2px 5px #BBBBBB;	
+}

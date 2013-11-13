@@ -1,5 +1,6 @@
 <?php
 	include("numbers.php");
+	include("positions.php");
 ?>
 <!DOCTYPE html>
 
@@ -87,6 +88,7 @@
 	 
 		// Position des Markers ==> Sollte Position der Karte entsprechen
 		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext);
+		
 
 	}
 
