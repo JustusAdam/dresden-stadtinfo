@@ -22,4 +22,6 @@
 				<li>es gibt mehrere Mensen, welche alle vom Studentenwerk betrieben werden, <br>von ihnen ist die gr&ouml;&szlig;te die Mensa Bergstra&szlig;e (&bdquo;Neue Mensa&rdquo;)</li>
 				
 			</ul>";
+	$xpos = "13.726667";
+	$ypos = "51.028056";
 ?>

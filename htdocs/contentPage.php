@@ -54,13 +54,13 @@
 
 	function drawmap() {
 		// Popup und Popuptext mit evtl. Grafik ==> müssen wir noch sorgfältig bearbeiten!!!
-		var popuptext="<font color=\"black\"><b>Frauenkirche<br>01067 Dresden</b></font>";
+		var popuptext="<font color=\"black\"><b><?php echo "$heading";?></b></font>";
 
 		OpenLayers.Lang.setCode('de');
 		
 		// Position und Zoomstufe der Karte ==> Sollte Position des Markers (s.u.) entsprechen (findet man in Wikipedia rechts oben) 
-		var lon = 13.741575;
-		var lat = 51.051883;
+		var lon = <?php echo "$xpos";?>;
+		var lat = <?php echo "$ypos";?>;
 		var zoom = 15;  //15 ist gut!
 
 		map = new OpenLayers.Map('map', {
@@ -86,7 +86,7 @@
 		jumpTo(lon, lat, zoom);
 	 
 		// Position des Markers ==> Sollte Position der Karte entsprechen
-		addMarker(layer_markers, 13.741575, 51.051883, popuptext);
+		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext);
 
 	}
 
@@ -146,11 +146,11 @@
 		<div class="BigBox2">
 			<div class="exampleWrapper">
 				<div class="myElement greenishSlides gsHorizontal">
-					<div class="gsSlide left gsActive"><img src="<?php echo "./resources/images/"; echo "$ct"; echo "1.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img src="<?php echo "./resources/images/"; echo "$ct"; echo "2.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img src="<?php echo "./resources/images/"; echo "$ct"; echo "3.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img src="<?php echo "./resources/images/"; echo "$ct"; echo "4.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img src="<?php echo "./resources/images/"; echo "$ct"; echo "5.jpg";?>" /></div>
+					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "1.jpg";?>" /></div>
+					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "2.jpg";?>" /></div>
+					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "3.jpg";?>" /></div>
+					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "4.jpg";?>" /></div>
+					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "5.jpg";?>" /></div>
 				</div>
 			</div>
 		</div>

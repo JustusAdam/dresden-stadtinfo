@@ -13,4 +13,6 @@
 				<li>bis 1985 f&uuml;hrten Stra&szlig;enbahnlinen &uuml;ber die Br&uuml;cke, <br>welche jedoch auf Grund von verminderter Tragf&auml;higkeit  eingestellt wurden, <br>f&uuml;r den Kfz-Verkehr besteht eine Begrenzung auf 15t</li>
 				<li>seit November 2011 durch 60 LED-Strahler beleuchtet</li>
 			</ul>";
+	$xpos = "13.810047";
+	$ypos = "51.053373";
 ?>

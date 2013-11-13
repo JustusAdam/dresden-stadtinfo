@@ -15,5 +15,7 @@
 			    <li>eindrucksvollstes Element der Innengestaltung ist ein <br>17*12m und 400 Kg schwerer Schmuckvorhang von dem Maler Ferdinand Keller</li>
 			    <li>B&uuml;hnenportal wird von einem  Fries geschm&uuml;ckt, <br>welcher Figuren aus Schauspiel und Oper zeigt</li>
 			
-			</ul>"
+			</ul>";
+	$xpos = "13.735169";
+	$ypos = "51.054508";
 ?>

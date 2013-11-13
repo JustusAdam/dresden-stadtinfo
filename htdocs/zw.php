@@ -19,4 +19,6 @@
 		         
 		     <li>Veranstaltungsort von Theater- und Musikveranstaltungen</li>
 		   </ul>";
+	$xpos = "13.733889";
+	$ypos = "51.053056";
 ?>

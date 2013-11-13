@@ -18,4 +18,6 @@
 			    <li>steht allen Besuchern t&auml;glich als &bdquo;City-Kirche&rdquo; offen <br>und hat keine eigene Kirchgemeinde mehr</li>
 			    
 			</ul>";
+	$xpos = "13.741575";
+	$ypos = "51.051883";
 ?>
