@@ -94,13 +94,24 @@
 
 	//]]>
 		</script>
+		<script type="text/javascript">
+			function showelement(id){
+				box = document.getElementById(id);
+				box.style.display = "block";
+			}
+			function hideelement(){
+				box.style.display = "none";
+			}
+		</script>
 		<noscript>Die Karte kann nicht angezeigt werden, da JavaScript nicht installiert oder oder ausgeschaltet ist.</noscript>
 
 </head>
 <body onload="drawmap();">
 	<header>
-		<div class="HeaderContent">
-			<div id="StartButton" onclick="document.location.href='index.html'">
+		<header>
+		<div class="HeaderContent HeaderStuff">
+			
+			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='map.php'">
 				Start
 			</div>
 			
@@ -111,8 +122,15 @@
 			</div>
 			
 			<div id="UpButtonContainer">
-				<div id="Up" onclick="document.location.href='#'">
-					&#x21E7
+				<div class="HeaderStuff" id="Help" onclick="document.location.href='#'"  onmouseover="showelement('HelpBox');" onmouseout="hideelement();">
+					Help
+				</div>
+			</div>
+			<div id="HelpBoxContainer">
+				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
+					<span class="HelpBoxContent">Larger Font<br /></span>
+					<span class="HelpBoxContent HeaderStuff">Higher Contrast<br /></span>
+					<span class="HelpBoxContent HeaderStuff">Fancy stuff<br /></span>
 				</div>
 			</div>
 		</div>

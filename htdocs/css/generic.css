@@ -7,14 +7,16 @@
 	top: 50px;
 	z-index: 3;
 }
+.HeaderStuff{
+	border-color:#FFA6A6;
+	border-style:solid;
+}
 .HeaderContent{
 	width: 1000px;
 	height: 50px;
 	margin-left: auto;
 	margin-right: auto;
 	border-width: 0px 1px;
-	border-style: solid;
-	border-color: #FFA6A6;
 	text-align: center;
 	line-height:50px;
 	vertical-align: middle;
@@ -25,28 +27,48 @@
 	float: left;
 	height: 50px;
 	border-width: 0px 1px 0px 0px;
-	border-style:solid;
-	border-color:#FFA6A6;
 }
 #StartButton:hover{
 	cursor:pointer;
 	text-decoration:underline;
 }
 #UpButtonContainer{
-	float: right;
+	float: left;
 	width: 130px;
 	height: 60px;
 }
-#Up{
+#Help{
 	border-width: 0px 0px 0px 1px;
-	border-style:solid;
-	border-color:#FFA6A6;
 	float: right;
 	height: 50px;
-	width: 60px;
+	width: 120px;
 }
-#Up:hover{
-	cursor:pointer;
+#HelpBox{
+	display: none;
+	position: fixed;
+	float:right;
+	margin-left: auto;
+	margin-right: 0px;
+	top: 50px;
+	background-color: #E5462D;
+	line-height:30px;
+	z-index: 4;	
+	font-size: 10pt;
+	width: 150px;
+	border-width:1px;
+}
+#HelpBoxContainer{
+	width: 150px;
+	float:right;
+	height:0px;
+	margin-right: 1px;
+}
+.HelpBoxContent{
+	text-align: right;
+	float: right;
+	padding-right: 10px;
+	border-width: 1px 0px 0px 0px;
+	width:100%;
 }
 #Title{
 	width:738px;
@@ -62,7 +84,7 @@ header{
 	font-size: 20pt;
 	text-align: center;
 	position: fixed;
-	z-index: 4;
+	z-index: 10;
 }
 body{
 	margin: 0px;

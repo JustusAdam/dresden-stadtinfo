@@ -5,11 +5,22 @@
 	<link rel="stylesheet" href="./css/index.css" type="text/css">
 <meta charset="ISO-8859-1">
 <title>Startpage</title>
+<script type="text/javascript">
+	function showelement(id){
+		box = document.getElementById(id);
+		box.style.display = "block";
+	}
+	function hideelement(){
+		box.style.display = "none";
+	}
+</script>
+</style>
 </head>
 <body>
 	<header>
-		<div class="HeaderContent">
-			<div id="StartButton" onclick="document.location.href='map.php'">
+		<div class="HeaderContent HeaderStuff">
+			
+			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='map.php'">
 				Karte
 			</div>
 			
@@ -18,8 +29,15 @@
 			</div>
 			
 			<div id="UpButtonContainer">
-				<div id="Up" onclick="document.location.href='#'">
-					&#x21E7
+				<div class="HeaderStuff" id="Help" onclick="document.location.href='#'"  onmouseover="showelement('HelpBox');" onmouseout="hideelement();">
+					Help
+				</div>
+			</div>
+			<div id="HelpBoxContainer">
+				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
+					<span class="HelpBoxContent">Larger Font<br /></span>
+					<span class="HelpBoxContent HeaderStuff">Higher Contrast<br /></span>
+					<span class="HelpBoxContent HeaderStuff">Fancy stuff<br /></span>
 				</div>
 			</div>
 		</div>
