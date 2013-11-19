@@ -108,10 +108,9 @@
 </head>
 <body onload="drawmap();">
 	<header>
-		<header>
 		<div class="HeaderContent HeaderStuff">
 			
-			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='map.php'">
+			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='index.html'">
 				Start
 			</div>
 			

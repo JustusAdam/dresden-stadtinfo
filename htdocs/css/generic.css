@@ -6,6 +6,7 @@
 	position: relative;
 	top: 50px;
 	z-index: 3;
+	font: Verdana 12pt none,
 }
 .HeaderStuff{
 	border-color:#FFA6A6;

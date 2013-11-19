@@ -64,10 +64,10 @@
 
 </head>
 <body onload="drawmap();">
-	
 	<header>
-		<div class="HeaderContent">
-			<div id="StartButton" onclick="document.location.href='index.html'">
+		<div class="HeaderContent HeaderStuff">
+			
+			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='index.html'">
 				Start
 			</div>
 			
@@ -76,7 +76,16 @@
 			</div>
 			
 			<div id="UpButtonContainer">
-				
+				<div class="HeaderStuff" id="Help" onclick="document.location.href='#'"  onmouseover="showelement('HelpBox');" onmouseout="hideelement();">
+					Help
+				</div>
+			</div>
+			<div id="HelpBoxContainer">
+				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
+					<span class="HelpBoxContent">Larger Font<br /></span>
+					<span class="HelpBoxContent HeaderStuff">Higher Contrast<br /></span>
+					<span class="HelpBoxContent HeaderStuff">Fancy stuff<br /></span>
+				</div>
 			</div>
 		</div>
 	</header>

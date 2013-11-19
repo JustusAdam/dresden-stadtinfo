@@ -1,7 +1,6 @@
-@CHARSET "ISO-8859-1";
-
 #Global{
 	height: 1240px;
+	font: normal 12pt Verdana;
 }
 .BigBox1{
 	float:left;
@@ -30,6 +29,9 @@
 	padding: 1% 3% 1% 1%;
 	color:white;
 	overflow: scroll;
+}
+.SmallBox1 li{
+	list-style-type: square;
 }
 .SmallBox2{
 	float: left;
@@ -78,7 +80,4 @@ img.Slider{
 }
 .exampleWrapper{
 	position: relative;
-}
-li{
-	list-style-type: square;
 }
