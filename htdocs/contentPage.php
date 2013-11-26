@@ -1,6 +1,13 @@
 <?php
-	include("numbers.php");
+	$ct = $_GET["dest"];
+    include ("$ct.php");
 	include("positions.php");
+	$posfk = "13.741575, 51.051883";
+	$posso = "13.735169, 51.054508";
+	$postu = "13.726667, 51.028056";
+	$posbw = "13.810047, 51.053373";
+	$posgg = "13.763056, 51.0375";
+	$poszw = "13.733889, 51.053056";
 ?>
 <!DOCTYPE html>
 
@@ -127,9 +134,9 @@
 			</div>
 			<div id="HelpBoxContainer">
 				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
-					<span class="HelpBoxContent">Larger Font<br /></span>
-					<span class="HelpBoxContent HeaderStuff">Higher Contrast<br /></span>
-					<span class="HelpBoxContent HeaderStuff">Fancy stuff<br /></span>
+					<div class="HelpBoxContent">Larger Font</div>
+					<div class="HelpBoxContent HeaderStuff">Higher Contrast</div>
+					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
 				</div>
 			</div>
 		</div>
