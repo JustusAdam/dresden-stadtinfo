@@ -23,6 +23,8 @@
 		
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.slides.js"></script>
+	
+	<script type="text/javascript" src="./js/changestyle.js"></script>
 		
 	<script type="text/javascript">
 		(function($) {
@@ -115,7 +117,7 @@
 
 </head>
 <body onload="drawmap();">
-	<header>
+	<header id="header">
 		<div class="HeaderContent HeaderStuff">
 			
 			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='index.html'">
@@ -135,8 +137,8 @@
 			</div>
 			<div id="HelpBoxContainer">
 				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
-					<div class="HelpBoxContent">Larger Font</div>
-					<div class="HelpBoxContent HeaderStuff">Higher Contrast</div>
+					<div class="HelpBoxContent" onclick="largeFont(this);" id="largerFontButton">Larger Font</div>
+					<div class="HelpBoxContent HeaderStuff" onclick="highContrast();" id="highContrastButton">Higher Contrast</div>
 					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
 				</div>
 			</div>
@@ -155,7 +157,7 @@
 		
 		<div id="SmallBoxContainer">
 		
-			<div class="SmallBox1">
+			<div id="SmallBox1">
 				<?php
 					echo "$text";
 					?>
@@ -170,7 +172,7 @@
 		
 		</div>
 		
-		<div class="BigBox2">
+		<div id="BigBox2">
 			<div class="exampleWrapper">
 				<div class="myElement greenishSlides gsHorizontal">
 					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "1.jpg";?>" /></div>

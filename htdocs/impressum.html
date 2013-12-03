@@ -32,7 +32,7 @@
 	</head>
 
 <body>
-	<header>
+	<header id="header">
 		<div class="HeaderContent HeaderStuff">
 			
 			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='index.html'">
@@ -50,8 +50,8 @@
 			</div>
 			<div id="HelpBoxContainer">
 				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
-					<div class="HelpBoxContent">Larger Font</div>
-					<div class="HelpBoxContent HeaderStuff">Higher Contrast</div>
+					<div class="HelpBoxContent" onclick="largeFont(this);" id="largerFontButton">Larger Font</div>
+					<div class="HelpBoxContent HeaderStuff" onclick="highContrast();" id="highContrastButton">Higher Contrast</div>
 					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
 				</div>
 			</div>

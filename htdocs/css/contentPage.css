@@ -11,7 +11,7 @@
 	color: #3385FF;
 	z-index: 3;
 }
-.BigBox2{
+#BigBox2{
 	float:right;
 	width: 73%;
 	height: 300px;
@@ -20,7 +20,7 @@
 	padding: 20px 20px;
 	color: #3385FF;
 }
-.SmallBox1{
+#SmallBox1{
 	float: left;
 	width: 39%;
 	height: 400px;
