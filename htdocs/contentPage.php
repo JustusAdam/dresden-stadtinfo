@@ -106,7 +106,8 @@
 				box = document.getElementById(id);
 				box.style.display = "block";
 			}
-			function hideelement(){
+			function hideelement(id){
+				box = document.getElementById(id);
 				box.style.display = "none";
 			}
 		</script>
@@ -128,7 +129,7 @@
 			</div>
 			
 			<div id="UpButtonContainer">
-				<div class="HeaderStuff" id="Help" onclick="document.location.href='#'"  onmouseover="showelement('HelpBox');" onmouseout="hideelement();">
+				<div class="HeaderStuff" id="Help" onmouseover="showelement('HelpBox');" onmouseout="hideelement('HelpBox');">
 					Help
 				</div>
 			</div>

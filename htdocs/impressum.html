@@ -19,26 +19,44 @@
 		
 		<link rel="stylesheet" href="./css/generic.css" type="text/css" />
 		<link rel="stylesheet" href="./css/impressum.css" type="text/css" />
+		<script type="text/javascript">
+			function showelement(id){
+				box = document.getElementById(id);
+				box.style.display = "block";
+			}
+			function hideelement(id){
+				box = document.getElementById(id);
+				box.style.display = "none";
+			}
+		</script>
 	</head>
 
-	<body>
-		<header>
-			<div class="HeaderContent">
-				<div id="StartButton" onclick="document.location.href='index.html'">
+<body>
+	<header>
+		<div class="HeaderContent HeaderStuff">
+			
+			<div class="HeaderStuff" id="StartButton" onclick="document.location.href='index.html'">
 				Start
-				</div>
-					
-				<div id="Title"> 
-					Ein Stadtf&uuml;hrer Dresdens
-				</div>
-				
-				<div id="UpButtonContainer">
-					<div id="Up" onclick="document.location.href='#'">
-						&#x21E7
-					</div>
+			</div>
+			
+			<div id="Title"> 
+				Impressum
+			</div>
+			
+			<div id="UpButtonContainer">
+				<div class="HeaderStuff" id="Help" onmouseover="showelement('HelpBox');" onmouseout="hideelement('HelpBox');">
+					Help
 				</div>
 			</div>
-		</header>
+			<div id="HelpBoxContainer">
+				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
+					<div class="HelpBoxContent">Larger Font</div>
+					<div class="HelpBoxContent HeaderStuff">Higher Contrast</div>
+					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
+				</div>
+			</div>
+		</div>
+	</header>
 		<div id="Global">
 			<div style="padding: 20px;">
 				<p><strong>Datenschutz</strong><br />
