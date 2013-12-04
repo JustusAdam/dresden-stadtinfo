@@ -14,11 +14,14 @@
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-		<link rel="shortcut icon" href="/favicon.ico">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		
 		<link rel="stylesheet" href="./css/generic.css" type="text/css" />
 		<link rel="stylesheet" href="./css/impressum.css" type="text/css" />
+		<link rel="stylesheet" href="./css/smallFont.css" type="text/css">
+		<link rel="stylesheet" href="./css/regularContrast.css" type="text/css">
+		
+		<script type="text/javascript" src="./js/changestyle.js"></script>
+		
 		<script type="text/javascript">
 			function showelement(id){
 				box = document.getElementById(id);
@@ -50,7 +53,7 @@
 			</div>
 			<div id="HelpBoxContainer">
 				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
-					<div class="HelpBoxContent" onclick="largeFont(this);" id="largerFontButton">Larger Font</div>
+					<div class="HelpBoxContent" onclick="largeFont();" id="largerFontButton">Larger Font</div>
 					<div class="HelpBoxContent HeaderStuff" onclick="highContrast();" id="highContrastButton">Higher Contrast</div>
 					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
 				</div>
@@ -58,7 +61,7 @@
 		</div>
 	</header>
 		<div id="Global">
-			<div style="padding: 20px;">
+			<div style="padding: 20px;" id="Impressumstext">
 				<p><strong>Datenschutz</strong><br />
 				Der Nutzung von im Rahmen der Impressumspflicht ver&ouml;ffentlichten Kontaktdaten
 				durch Dritte zur &Uuml;bersendung von nicht ausdr&uuml;cklich angeforderter

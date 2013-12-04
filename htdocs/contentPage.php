@@ -16,6 +16,8 @@
 	<title><?php echo "$heading"?></title>
 	<link rel="stylesheet" href="./css/generic.css" type="text/css">
 	<link rel="stylesheet" href="./css/contentPage.css" type="text/css">
+	<link rel="stylesheet" href="./css/smallFont.css" type="text/css">
+	<link rel="stylesheet" href="./css/regularContrast.css" type="text/css">
 	
 	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
 	<script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
@@ -137,7 +139,7 @@
 			</div>
 			<div id="HelpBoxContainer">
 				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
-					<div class="HelpBoxContent" onclick="largeFont(this);" id="largerFontButton">Larger Font</div>
+					<div class="HelpBoxContent" onclick="largeFont();" id="largerFontButton">Larger Font</div>
 					<div class="HelpBoxContent HeaderStuff" onclick="highContrast();" id="highContrastButton">Higher Contrast</div>
 					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
 				</div>
@@ -187,7 +189,8 @@
 	</div>
 	<footer>
 		<div class="HeaderContent" id="FooterText">
-			&copy;2013 Justus Adam, Jens Wettlaufer, Adrian Lieber, Peter Klausing
+			&copy;2013 Justus Adam, Jens Wettlaufer, Adrian Lieber, Peter Klausing :: 
+			<span onclick="document.location.href='impressum.html'" class="link">Impressum</span>
 		</div>
 	</footer>
 </body>
