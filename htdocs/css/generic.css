@@ -58,6 +58,9 @@ html{
 	width: 150px;
 	border-width:1px;
 }
+#HelpBox:hover{
+	cursor: pointer;
+}
 #HelpBoxContainer{
 	width: 150px;
 	float:right;
