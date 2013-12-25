@@ -1,0 +1,24 @@
+#HelpBox{
+	background-color: black;
+}
+header{
+	background-color: black;
+}
+footer{
+	background-color: black;
+	color: white;
+}
+#Global{
+	background-color: grey;
+}
+.SmallBox1{
+	background-color: white;
+	color: black;
+	}
+#SmallBox1{
+	background-color: black;
+	}
+#Impressumstext{
+	background-color: white;
+	color: black;}
+
