@@ -24,5 +24,7 @@
 			</ul>";
 	$xpos = "13.726667";
 	$ypos = "51.028056";
-	$media1 = "media currently unavailable";
+	$media1 = "<video width=\"480\" height=\"384\" controls>
+					<source src=\"./resources/video/TUDresden.mp4\" type=\"video/mp4\">
+				</video>";
 ?>
