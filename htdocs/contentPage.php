@@ -1,7 +1,6 @@
 <?php
 	$ct = $_GET["dest"];
     include ("$ct.php");
-	include("positions.php");
 	$posfk = "13.741575, 51.051883";
 	$posso = "13.735169, 51.054508";
 	$postu = "13.726667, 51.028056";
