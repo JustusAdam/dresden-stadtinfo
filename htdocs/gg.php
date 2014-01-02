@@ -2,7 +2,7 @@
 	$heading = "Der Gro&szlig;e Garten";
 	$text = "<ul>
 				<li>Park welcher seinen Ursprung im Barock findet</li>
-				<li>auf Befehl von Johann Georg III(s&auml;chsischer Kurf&uuml;rst) seit 1676 angelegt</li>
+				<li>auf Befehl des Kurf&uuml;rsten Johann Georg III 1676 angelegt</li>
 				<li>im Verlauf der Geschichte mehrfach erweitert</li>
 				<li>heute ann&auml;hernd rechteckige Form mit einer Gr&ouml;&szlig;e von ca. 1,8km<sup>2</sup></li>
 				<li>1,9km lang und 950m breit</li>

@@ -4,7 +4,7 @@
 				<li>Die Frauenkirche: ehemals &bdquo;Kirche unserer lieben Frauen&rdquo;</li>
 				<li>Namensbezug auf die Heilige Maria</li>
 				<li>im Barock erbaute, evangelisch-lutherische Kirche</li>
-				<li>Ma&szlig;e: 50.02m (in Ost-West-Breite), 41,96m (N&ouml;rd-S&uuml;d-L&auml;nge), 91,23m Gesamth&ouml;he</li>
+				<li>Ma&szlig;e: 50.02m (in Ost-West-Breite), 41,96m (Nord-S&uuml;d-L&auml;nge), 91,23m Gesamth&ouml;he</li>
 				<li>besitzt eine der gr&ouml;&szlig;ten Steinkuppeln n&ouml;rdlich der Alpen</li>
 				<li>Kuppelma&szlig;e: 36,65m Innenraum bis zur Kuppeldecke, 24m Kuppelh&ouml;he, 26,15m Au&szlig;endurchmesser</li>
 				<li>wurde von 1726-1743 errichtet (nach einem Entwurf von Georg B&auml;hr)</li>
