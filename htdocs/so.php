@@ -18,4 +18,5 @@
 			</ul>";
 	$xpos = "13.735169";
 	$ypos = "51.054508";
+	$media1 = "media currently unavailable";
 ?>

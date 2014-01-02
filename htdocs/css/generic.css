@@ -2,13 +2,15 @@ html{
 	padding:0px;
 }
 #Global{
-	width: 1000px;
+	width: 980px;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
 	top: 50px;
 	z-index: 3;
 	font-family: Verdana;
+	overflow: hidden;
+	padding:10px;
 }
 .HeaderStuff{
 	border-color:#FFA6A6;

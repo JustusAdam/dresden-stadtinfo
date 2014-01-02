@@ -167,7 +167,7 @@
 			
 			<div class="SmallBox2">
 			
-			<h1>Insert audio here!</h1>
+			<?php echo "$media1"?>
 			
 			</div>
 		

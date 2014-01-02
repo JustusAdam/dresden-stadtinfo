@@ -22,4 +22,7 @@
 			</ul>";
 	$xpos = "13.763056";
 	$ypos = "51.0375";
+	$media1 = "<video width=\"480\" height=\"384\" controls>
+					<source src=\"./resources/video/gg.mp4\" type=\"video/mp4\">
+				</video>";
 ?>
