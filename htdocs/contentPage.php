@@ -60,45 +60,84 @@
 
 	var map;
 	var layer_mapnik;
-	var layer_tah;
-	var layer_markers;
 
 	function drawmap() {
-		// Popup und Popuptext mit evtl. Grafik ==> müssen wir noch sorgfältig bearbeiten!!!
+		// Popup und Popuptext
 		var popuptext="<font color=\"black\"><b><?php echo "$heading";?></b></font>";
+		
+		/***
+		
+		var popuptext_fk = "<a href=\"contentPage.php?dest=fk\"><b>Frauenkirche</b></a><br><i>Neumarkt, 01067 Dresden</i>";
+		var popuptext_so = "<a href=\"contentPage.php?dest=so\"><b>Semperoper</b></a><br><i>Theaterplatz 2, 01067 Dresden</i>";
+		var popuptext_zw = "<a href=\"contentPage.php?dest=zw\"><b>Zwinger</b></a><br><i>Sophienstra&szlig;e, 01067 Dresden </i>";
+		var popuptext_tu = "<a href=\"contentPage.php?dest=tu\"><b>TU Dresden</b></a><br><i>Mommsenstra&szlig;e 9, 01069 Dresden</i>";
+		var popuptext_gg = "<a href=\"contentPage.php?dest=gg\"><b>Gro&szlig;er Garten</b></a><br><i>01219 Dresden</i>";
+		var popuptext_bw = "<a href=\"contentPage.php?dest=bw\"><b>Blaues Wunder</b></a><br><i>Loschwitzer Br&uuml;cke, 01326 Dresden</i>";
+		
+		***/
 
 		OpenLayers.Lang.setCode('de');
 		
 		// Position und Zoomstufe der Karte ==> Sollte Position des Markers (s.u.) entsprechen (findet man in Wikipedia rechts oben) 
 		var lon = <?php echo "$xpos";?>;
 		var lat = <?php echo "$ypos";?>;
-		var zoom = 15;  //15 ist gut!
+		var zoom = 13;
 
 		map = new OpenLayers.Map('map', {
 			projection: new OpenLayers.Projection("EPSG:900913"),
 			displayProjection: new OpenLayers.Projection("EPSG:4326"),
-			controls: [
-				new OpenLayers.Control.Navigation(),
+			controls : [
 				new OpenLayers.Control.LayerSwitcher(),
-				new OpenLayers.Control.PanZoomBar()],
+				new OpenLayers.Control.Navigation(), //Mouse navigation is activated
+				new OpenLayers.Control.PanZoomBar(), //Zoom bar = top-left corner
+				new OpenLayers.Control.ScaleLine(), //Scale line = bottom-left corner
+				new OpenLayers.Control.MousePosition({ //shows EPSG coordinates = bottom-right corner
+					prefix: '<a target="_blank" ' + 'href="http://spatialreference.org/ref/epsg/4326/">' + 'EPSG:4326</a>-Koordianten: '
+				}), 
+				new OpenLayers.Control.KeyboardDefaults(), //Keyboard can be used 
+				new OpenLayers.Control.NavToolbar(), //extra Navigation Toolbar = left
+			],
 			maxExtent:
-				new OpenLayers.Bounds(-20037508.34,-20037508.34,
-										20037508.34, 20037508.34),
+				maxExtent : new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
 			numZoomLevels: 18,
 			maxResolution: 156543,
 			units: 'meters'
 		});
 
 		layer_mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
-		layer_markers = new OpenLayers.Layer.Markers("Address", { projection: new OpenLayers.Projection("EPSG:4326"), 
-													  visibility: true, displayInLayerSwitcher: false });
+				map.addLayer(layer_mapnik);
 
-		map.addLayers([layer_mapnik, layer_markers]);
-		jumpTo(lon, lat, zoom);
-	 
-		// Position des Markers ==> Sollte Position der Karte entsprechen
-		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext);
+				var layerMarkers = new OpenLayers.Layer.Markers("Standort");
+				map.addLayer(layerMarkers);
+
+				var layerPOI = new OpenLayers.Layer.Markers("Weitere POIs");
+				map.addLayer(layerPOI);
+
+				jumpTo(lon, lat, zoom);
 		
+		var size = new OpenLayers.Size(21, 25);
+		var sizeHaupt = new OpenLayers.Size(21, 25);
+		var sizePOI = new OpenLayers.Size(21, 25);
+		var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
+		var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-green.png', size, offset);
+		var iconHaupt = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker.png', sizeHaupt, offset);
+		var iconPOI = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-blue.png', sizePOI, offset);
+				
+			var c1 = iconPOI.clone();
+			var c2 = iconPOI.clone();
+			var c3 = iconPOI.clone();
+			var c4 = iconPOI.clone();
+	 
+		// Position des Markers
+		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext, iconHaupt);
+		
+		/***
+		addOnlyMarker(layerPOI, soLon, soLat, popuptext_so, iconPOI);
+		addOnlyMarker(layerPOI, zwLon, zwLat, popuptext_zw, c1);
+		addOnlyMarker(layerPOI, tuLon, tuLat, popuptext_tu, c2);
+		addOnlyMarker(layerPOI, ggLon, ggLat, popuptext_gg, c3);
+		addOnlyMarker(layerPOI, bwLon, bwLat, popuptext_bw, c4);
+		***/
 
 	}
 
