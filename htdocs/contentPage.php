@@ -127,17 +127,18 @@
 			var c2 = iconPOI.clone();
 			var c3 = iconPOI.clone();
 			var c4 = iconPOI.clone();
+			var c5 = iconPOI.clone();
 	 
 		// Position des Markers
 		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext, iconHaupt);
 		
-		/***
-		addOnlyMarker(layerPOI, soLon, soLat, popuptext_so, iconPOI);
-		addOnlyMarker(layerPOI, zwLon, zwLat, popuptext_zw, c1);
-		addOnlyMarker(layerPOI, tuLon, tuLat, popuptext_tu, c2);
-		addOnlyMarker(layerPOI, ggLon, ggLat, popuptext_gg, c3);
-		addOnlyMarker(layerPOI, bwLon, bwLat, popuptext_bw, c4);
-		***/
+		addOnlyMarker(layerPOI, <?php echo "$posso"?>, popuptext_so, iconPOI);
+		addOnlyMarker(layerPOI, <?php echo "$poszw"?>, popuptext_zw, c1);
+		addOnlyMarker(layerPOI, <?php echo "$postu"?>, popuptext_tu, c2);
+		addOnlyMarker(layerPOI, <?php echo "$posgg"?>, popuptext_gg, c3);
+		addOnlyMarker(layerPOI, <?php echo "$posbw"?>, popuptext_bw, c4);
+	/*	addOnlyMarker(layerPOI, <?php echo "$posfk"?>, popuptext_fk, c5);	*/
+		
 
 	}
 
