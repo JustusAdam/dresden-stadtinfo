@@ -1,5 +1,13 @@
-// Wichtigste Informations-Seite: http://wiki.openstreetmap.org/wiki/Main_Page
 
+/*** Coordinates ***/
+var fkLon = 13.741575; var fkLat = 51.051883; //Frauenkirche
+var soLon = 13.735169; var soLat = 51.054508; //Semperoper
+var zwLon = 13.733889; var zwLat = 51.053056; //Zwinger
+var tuLon = 13.726667; var tuLat = 51.028056; //TU Dresden
+var ggLon = 13.763056; var ggLat = 51.0375; // Großer Garten
+var bwLon = 13.810047; var bwLat = 51.053373; //Blaues Wunder
+
+/*** Functions ***/
 function jumpTo(lon, lat, zoom) {
     var x = Lon2Merc(lon);
     var y = Lat2Merc(lat);
@@ -17,24 +25,31 @@ function Lat2Merc(lat) {
     return 20037508.34 * lat / 180;
 }
  
-function addMarker(layer, lon, lat, popupContentHTML) {
+function addMarker(layer, lon, lat, popupContentHTML, icon) 
+{
  
     var ll = new OpenLayers.LonLat(Lon2Merc(lon), Lat2Merc(lat));
     var feature = new OpenLayers.Feature(layer, ll); 
     feature.closeBox = true;
-    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(150, 100) } );
+    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(200, 50) } );
     feature.data.popupContentHTML = popupContentHTML;
     feature.data.overflow = "hidden";
  
-    var marker = new OpenLayers.Marker(ll);
+    var marker = new OpenLayers.Marker(ll, icon);
+    
+    
     marker.feature = feature;
  
-    var markerClick = function(evt) {
-        if (this.popup == null) {
+    var markerClick = function(evt) 
+    {
+        if (this.popup == null) 
+        {
             this.popup = this.createPopup(this.closeBox);
             map.addPopup(this.popup);
             this.popup.show();
-        } else {
+        } 
+        else 
+        {
             this.popup.toggle();
         }
         OpenLayers.Event.stop(evt);
@@ -42,7 +57,47 @@ function addMarker(layer, lon, lat, popupContentHTML) {
     marker.events.register("mousedown", feature, markerClick);
  
     layer.addMarker(marker);
-    map.addPopup(feature.createPopup(feature.closeBox));
+    
+    
+    map.addPopup(feature.createPopup(feature.closeBox));  // :D
+   
+}
+
+function addOnlyMarker(layer, lon, lat, popupContentHTML, icon) 
+{
+ 
+    var ll = new OpenLayers.LonLat(Lon2Merc(lon), Lat2Merc(lat));
+    var feature = new OpenLayers.Feature(layer, ll); 
+    feature.closeBox = true;
+    feature.popupClass = OpenLayers.Class(OpenLayers.Popup.FramedCloud, {minSize: new OpenLayers.Size(200, 50) } );
+    feature.data.popupContentHTML = popupContentHTML;
+    feature.data.overflow = "hidden";
+ 
+    var marker = new OpenLayers.Marker(ll, icon);
+    
+    
+    marker.feature = feature;
+ 
+    var markerClick = function(evt) 
+    {
+        if (this.popup == null) 
+        {
+            this.popup = this.createPopup(this.closeBox);
+            map.addPopup(this.popup);
+            this.popup.show();
+        } 
+        else 
+        {
+            this.popup.toggle();
+        }
+        OpenLayers.Event.stop(evt);
+    };
+    marker.events.register("mousedown", feature, markerClick);
+ 
+    layer.addMarker(marker);
+    
+    //Diffrence: map.addPopup(feature.createPopup(feature.closeBox));  
+   
 }
  
 function getCycleTileURL(bounds) {
