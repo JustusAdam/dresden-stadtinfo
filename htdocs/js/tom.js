@@ -1,12 +1,3 @@
-
-/*** Coordinates ***/
-var fkLon = 13.741575; var fkLat = 51.051883; //Frauenkirche
-var soLon = 13.735169; var soLat = 51.054508; //Semperoper
-var zwLon = 13.733889; var zwLat = 51.053056; //Zwinger
-var tuLon = 13.726667; var tuLat = 51.028056; //TU Dresden
-var ggLon = 13.763056; var ggLat = 51.0375; // Großer Garten
-var bwLon = 13.810047; var bwLat = 51.053373; //Blaues Wunder
-
 /*** Functions ***/
 function jumpTo(lon, lat, zoom) {
     var x = Lon2Merc(lon);
