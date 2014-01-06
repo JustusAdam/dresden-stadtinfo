@@ -216,11 +216,11 @@
 		<div id="BigBox2">
 			<div class="exampleWrapper">
 				<div class="myElement greenishSlides gsHorizontal">
-					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "1.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "2.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "3.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "4.jpg";?>" /></div>
-					<div class="gsSlide left gsActive"><img class="Slider" src="<?php echo "./resources/images/"; echo "$ct"; echo "5.jpg";?>" /></div>
+					<?php 
+						for($i=1;$i <= 5;$i++){
+							echo '<div class="gsSlide left gsActive"><img class="Slider" src="resources/images/' . $ct . $i . '.jpg" /></div>';
+						}
+					?>
 				</div>
 			</div>
 		</div>
