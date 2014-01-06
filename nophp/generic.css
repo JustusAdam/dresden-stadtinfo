@@ -4,7 +4,7 @@
 	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 1200px;
+	height: 1250px;
 	background-color: #F5F5F0;
 	position: relative;
 	top: 60px;
@@ -94,8 +94,8 @@
 
 .BigBox2{
 	float:right;
-	width: 73%;
-	height: 300px;
+	width: 96%;
+	height: 350px;
 	background-color: #E6E6FA;
 	margin: 20px;
 	/* padding: 0px 20px; */

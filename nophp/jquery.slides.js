@@ -755,7 +755,7 @@ $.extend(greenishSlides, {
 		},
 		gSHorizontal:{
 			width:"auto",
-			height:"300px", // HÖHE DER BILDERGALLERIE				!!!
+			height:"350px", // HÖHE DER BILDERGALLERIE				!!!
 			top:0,
 			left:"auto"
 		},

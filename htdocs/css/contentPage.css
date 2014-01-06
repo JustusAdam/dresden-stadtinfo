@@ -65,7 +65,7 @@ img.Slider{
 	width: 100%;	/* Breite der Bildergallerie	*/		
 } 			
 .gsSlide {
-	outline:1px solid #F5F5F0; /* Rahmen um die Bilder */
+	outline:0px solid #F5F5F0; /* Rahmen um die Bilder */
 }
 .exampleWrapper{
 	position: relative;
