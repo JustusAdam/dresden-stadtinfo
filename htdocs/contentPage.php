@@ -65,7 +65,7 @@
 		// Popup und Popuptext
 		var popuptext="<font color=\"black\"><b><?php echo "$heading";?></b></font>";
 		
-		/***
+		
 		
 		var popuptext_fk = "<a href=\"contentPage.php?dest=fk\"><b>Frauenkirche</b></a><br><i>Neumarkt, 01067 Dresden</i>";
 		var popuptext_so = "<a href=\"contentPage.php?dest=so\"><b>Semperoper</b></a><br><i>Theaterplatz 2, 01067 Dresden</i>";
@@ -74,7 +74,7 @@
 		var popuptext_gg = "<a href=\"contentPage.php?dest=gg\"><b>Gro&szlig;er Garten</b></a><br><i>01219 Dresden</i>";
 		var popuptext_bw = "<a href=\"contentPage.php?dest=bw\"><b>Blaues Wunder</b></a><br><i>Loschwitzer Br&uuml;cke, 01326 Dresden</i>";
 		
-		***/
+		
 
 		OpenLayers.Lang.setCode('de');
 		
@@ -131,14 +131,14 @@
 	 
 		// Position des Markers
 		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext, iconHaupt);
-		
-		addOnlyMarker(layerPOI, <?php echo "$posso"?>, popuptext_so, iconPOI);
-		addOnlyMarker(layerPOI, <?php echo "$poszw"?>, popuptext_zw, c1);
-		addOnlyMarker(layerPOI, <?php echo "$postu"?>, popuptext_tu, c2);
-		addOnlyMarker(layerPOI, <?php echo "$posgg"?>, popuptext_gg, c3);
-		addOnlyMarker(layerPOI, <?php echo "$posbw"?>, popuptext_bw, c4);
-	/*	addOnlyMarker(layerPOI, <?php echo "$posfk"?>, popuptext_fk, c5);	*/
-		
+		<?php 
+			if(!($ct=='so')) echo 'addOnlyMarker(layerPOI,' . $posso . ', popuptext_so, iconPOI);';
+			if(!($ct=='zw')) echo 'addOnlyMarker(layerPOI,' . $poszw . ', popuptext_zw, c1);';
+			if(!($ct=='tu')) echo 'addOnlyMarker(layerPOI,' . $postu . ', popuptext_tu, c2);';
+			if(!($ct=='gg')) echo 'addOnlyMarker(layerPOI,' . $posgg . ', popuptext_gg, c3);';
+			if(!($ct=='bw')) echo 'addOnlyMarker(layerPOI,' . $posbw . ', popuptext_bw, c4);';
+			if(!($ct=='fk')) echo 'addOnlyMarker(layerPOI,' . $posfk . ', popuptext_fk, c5);';
+		?>		
 
 	}
 
