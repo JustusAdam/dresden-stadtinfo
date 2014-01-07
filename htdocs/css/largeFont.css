@@ -17,5 +17,6 @@ header{
 	font-size:14pt;
 }
 #SmallBox1{
-	width: 50%;
+	width: auto;
+	height: 600px;
 	}
