@@ -62,49 +62,44 @@
 	var layer_mapnik;
 
 	function drawmap() {
-		// Popup und Popuptext
-		var popuptext="<font color=\"black\"><b><?php echo "$heading";?></b></font>";
-		
-		
-		
-		var popuptext_fk = "<a href=\"contentPage.php?dest=fk\"><b>Frauenkirche</b></a><br><i>Neumarkt, 01067 Dresden</i>";
-		var popuptext_so = "<a href=\"contentPage.php?dest=so\"><b>Semperoper</b></a><br><i>Theaterplatz 2, 01067 Dresden</i>";
-		var popuptext_zw = "<a href=\"contentPage.php?dest=zw\"><b>Zwinger</b></a><br><i>Sophienstra&szlig;e, 01067 Dresden </i>";
-		var popuptext_tu = "<a href=\"contentPage.php?dest=tu\"><b>TU Dresden</b></a><br><i>Mommsenstra&szlig;e 9, 01069 Dresden</i>";
-		var popuptext_gg = "<a href=\"contentPage.php?dest=gg\"><b>Gro&szlig;er Garten</b></a><br><i>01219 Dresden</i>";
-		var popuptext_bw = "<a href=\"contentPage.php?dest=bw\"><b>Blaues Wunder</b></a><br><i>Loschwitzer Br&uuml;cke, 01326 Dresden</i>";
-		
-		
+				// Popup und Popuptext mit evtl. Grafik
+				var popuptext="<b><?php echo $heading;?></b>";
+				
+				var popuptext_fk = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=fk\"><b>Frauenkirche</b></a><br><i>Neumarkt, 01067 Dresden</i>";
+				var popuptext_so = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=so\"><b>Semperoper</b></a><br><i>Theaterplatz 2, 01067 Dresden</i>";
+				var popuptext_zw = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=zw\"><b>Zwinger</b></a><br><i>Sophienstra&szlig;e, 01067 Dresden </i>";
+				var popuptext_tu = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=tu\"><b>TU Dresden</b></a><br><i>Mommsenstra&szlig;e 9, 01069 Dresden</i>";
+				var popuptext_gg = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=gg\"><b>Gro&szlig;er Garten</b></a><br><i>01219 Dresden</i>";
+				var popuptext_bw = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=bw\"><b>Blaues Wunder</b></a><br><i>Loschwitzer Br&uuml;cke, 01326 Dresden</i>";
 
-		OpenLayers.Lang.setCode('de');
-		
-		// Position und Zoomstufe der Karte ==> Sollte Position des Markers (s.u.) entsprechen (findet man in Wikipedia rechts oben) 
-		var lon = <?php echo "$xpos";?>;
-		var lat = <?php echo "$ypos";?>;
-		var zoom = 13;
+				OpenLayers.Lang.setCode('de');
 
-		map = new OpenLayers.Map('map', {
-			projection: new OpenLayers.Projection("EPSG:900913"),
-			displayProjection: new OpenLayers.Projection("EPSG:4326"),
-			controls : [
-				new OpenLayers.Control.LayerSwitcher(),
-				new OpenLayers.Control.Navigation(), //Mouse navigation is activated
-				new OpenLayers.Control.PanZoomBar(), //Zoom bar = top-left corner
-				new OpenLayers.Control.ScaleLine(), //Scale line = bottom-left corner
-				new OpenLayers.Control.MousePosition({ //shows EPSG coordinates = bottom-right corner
-					prefix: '<a target="_blank" ' + 'href="http://spatialreference.org/ref/epsg/4326/">' + 'EPSG:4326</a>-Koordianten: '
-				}), 
-				new OpenLayers.Control.KeyboardDefaults(), //Keyboard can be used 
-				new OpenLayers.Control.NavToolbar(), //extra Navigation Toolbar = left
-			],
-			maxExtent:
-				maxExtent : new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
-			numZoomLevels: 18,
-			maxResolution: 156543,
-			units: 'meters'
-		});
+				// Position und Zoomstufe der Karte
+				var lon = <?php echo $xpos; ?>;
+				var lat = <?php echo $ypos; ?>;
+				var zoom = 13;
 
-		layer_mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+				map = new OpenLayers.Map('map', {
+					projection : new OpenLayers.Projection("EPSG:900913"),
+					displayProjection : new OpenLayers.Projection("EPSG:4326"),
+					controls : [
+						new OpenLayers.Control.LayerSwitcher(),
+						new OpenLayers.Control.Navigation(), //Mouse navigation is activated
+						new OpenLayers.Control.PanZoomBar(), //Zoom bar = top-left corner
+						new OpenLayers.Control.ScaleLine(), //Scale line = bottom-left corner
+						new OpenLayers.Control.MousePosition({ //shows EPSG coordinates = bottom-right corner
+							prefix: '<a target="_blank" ' + 'href="http://spatialreference.org/ref/epsg/4326/">' + 'EPSG:4326</a>-Koordianten: '
+						}), 
+						new OpenLayers.Control.KeyboardDefaults(), //Keyboard can be used 
+						new OpenLayers.Control.NavToolbar(), //extra Navigation Toolbar = left
+					],
+					maxExtent : new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
+					numZoomLevels : 18,
+					maxResolution : 156543,
+					units : 'meters'
+				});
+
+				layer_mapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
 				map.addLayer(layer_mapnik);
 
 				var layerMarkers = new OpenLayers.Layer.Markers("Standort");
@@ -114,33 +109,35 @@
 				map.addLayer(layerPOI);
 
 				jumpTo(lon, lat, zoom);
-		
-		var size = new OpenLayers.Size(21, 25);
-		var sizeHaupt = new OpenLayers.Size(21, 25);
-		var sizePOI = new OpenLayers.Size(21, 25);
-		var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
-		var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-green.png', size, offset);
-		var iconHaupt = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker.png', sizeHaupt, offset);
-		var iconPOI = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-blue.png', sizePOI, offset);
-				
-			var c1 = iconPOI.clone();
-			var c2 = iconPOI.clone();
-			var c3 = iconPOI.clone();
-			var c4 = iconPOI.clone();
-			var c5 = iconPOI.clone();
-	 
-		// Position des Markers
-		addMarker(layer_markers, <?php echo "$xpos, $ypos";?>, popuptext, iconHaupt);
-		<?php 
-			if(!($ct=='so')) echo 'addOnlyMarker(layerPOI,' . $posso . ', popuptext_so, iconPOI);';
-			if(!($ct=='zw')) echo 'addOnlyMarker(layerPOI,' . $poszw . ', popuptext_zw, c1);';
-			if(!($ct=='tu')) echo 'addOnlyMarker(layerPOI,' . $postu . ', popuptext_tu, c2);';
-			if(!($ct=='gg')) echo 'addOnlyMarker(layerPOI,' . $posgg . ', popuptext_gg, c3);';
-			if(!($ct=='bw')) echo 'addOnlyMarker(layerPOI,' . $posbw . ', popuptext_bw, c4);';
-			if(!($ct=='fk')) echo 'addOnlyMarker(layerPOI,' . $posfk . ', popuptext_fk, c5);';
-		?>		
 
-	}
+				var size = new OpenLayers.Size(21, 25);
+				var sizeHaupt = new OpenLayers.Size(21, 25);
+				var sizePOI = new OpenLayers.Size(21, 25);
+				var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
+				var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-green.png', size, offset);
+				var iconHaupt = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker.png', sizeHaupt, offset);
+				var iconPOI = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-blue.png', sizePOI, offset);
+				
+				var c1 = iconPOI.clone();
+				var c2 = iconPOI.clone();
+				var c3 = iconPOI.clone();
+				var c4 = iconPOI.clone();
+				var c5 = iconPOI.clone();
+				//------- Position des Markers   .... Marker wird über Funktion 'addMarker()' in tom.js gesetzt....
+
+				addMarker(layerMarkers, lon, lat, popuptext, iconHaupt);
+				
+				<?php 
+					if(!($ct=='so')) echo 'addOnlyMarker(layerPOI,' . $posso . ', popuptext_so, iconPOI);';
+					if(!($ct=='zw')) echo 'addOnlyMarker(layerPOI,' . $poszw . ', popuptext_zw, c1);';
+					if(!($ct=='tu')) echo 'addOnlyMarker(layerPOI,' . $postu . ', popuptext_tu, c2);';
+					if(!($ct=='gg')) echo 'addOnlyMarker(layerPOI,' . $posgg . ', popuptext_gg, c3);';
+					if(!($ct=='bw')) echo 'addOnlyMarker(layerPOI,' . $posbw . ', popuptext_bw, c4);';
+					if(!($ct=='fk')) echo 'addOnlyMarker(layerPOI,' . $posfk . ', popuptext_fk, c5);';
+				?>
+			
+
+			}
 
 	//]]>
 		</script>
