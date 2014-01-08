@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./css/map.css" type="text/css" >
 	<link rel="stylesheet" href="./css/smallFont.css" type="text/css">
 	<link rel="stylesheet" href="./css/regularContrast.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./css/print.css" media="print" />
 	
 	
 	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
