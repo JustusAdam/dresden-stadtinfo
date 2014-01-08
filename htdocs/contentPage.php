@@ -13,6 +13,7 @@
 <html>
 <head>
 	<title><?php echo "$heading"?></title>
+	<link rel="shortcut icon" href="./resources/images/D-letter.png" type="image/png">
 	<link rel="stylesheet" href="./css/generic.css" type="text/css">
 	<link rel="stylesheet" href="./css/contentPage.css" type="text/css">
 	<link rel="stylesheet" href="./css/smallFont.css" type="text/css">
