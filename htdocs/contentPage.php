@@ -13,13 +13,12 @@
 <html>
 <head>
 	<title><?php echo "$heading"?></title>
-	<link rel="shortcut icon" href="./resources/images/D-letter.png" type="image/png">
+	
 	<link rel="stylesheet" href="./css/generic.css" type="text/css">
 	<link rel="stylesheet" href="./css/contentPage.css" type="text/css">
 	<link rel="stylesheet" href="./css/smallFont.css" type="text/css">
 	<link rel="stylesheet" href="./css/regularContrast.css" type="text/css">
 	
-	<link rel="stylesheet" type="text/css" href="./css/print.css" media="print" />
 	
 	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
 	<script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
