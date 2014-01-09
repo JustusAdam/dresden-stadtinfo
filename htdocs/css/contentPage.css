@@ -24,7 +24,7 @@
 	color:white;
 	overflow: auto;
 }
-.SmallBox1 li{
+#SmallBox1 li{
 	list-style-type: square;
 }
 .SmallBox2{
@@ -65,8 +65,12 @@ img.Slider{
 	width: 100%;	/* Breite der Bildergallerie	*/		
 } 			
 .gsSlide {
-	outline:0px solid #F5F5F0; /* Rahmen um die Bilder */
+	outline:3px solid #3385FF; /* Rahmen um die Bilder */
 }
 .exampleWrapper{
 	position: relative;
+}
+.images{
+	width:400px;
+	height:300px;
 }
