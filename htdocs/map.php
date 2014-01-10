@@ -85,9 +85,9 @@
 		var sizeHaupt = new OpenLayers.Size(21, 25);
 		var sizePOI = new OpenLayers.Size(21, 25);
 		var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
-		var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-green.png', size, offset);
-		var iconHaupt = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker.png', sizeHaupt, offset);
-		var iconPOI = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-blue.png', sizePOI, offset);
+		var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-green.png', size, offset); 
+		var iconHaupt = new OpenLayers.Icon('./resources/marker.svg', sizeHaupt, offset); //http://www.openstreetmap.org/openlayers/img/marker.png
+		var iconPOI = new OpenLayers.Icon('./resources/marker_blue.svg', sizePOI, offset); //http://www.openstreetmap.org/openlayers/img/marker-blue.png
 
 		var c1 = iconPOI.clone();
 		var c2 = iconPOI.clone();
