@@ -15,7 +15,8 @@
 	<link rel="stylesheet" href="./css/map.css" type="text/css" >
 	<link rel="stylesheet" href="./css/smallFont.css" type="text/css">
 	<link rel="stylesheet" href="./css/regularContrast.css" type="text/css">
-	
+	<link rel="stylesheet" href="./css/print.css" type="text/css" media="print">
+	<link rel="shortcut icon" href="./resources/images/favicon.ico" type="image/x-icon">
 	
 	
 	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
@@ -134,14 +135,14 @@
 			
 			<div id="UpButtonContainer">
 				<div class="HeaderStuff" id="Help" onmouseover="showelement('HelpBox');" onmouseout="hideelement('HelpBox');">
-					Help
+					Hilfe
 				</div>
 			</div>
 			<div id="HelpBoxContainer">
 				<div class="HeaderStuff" id="HelpBox" onmouseout="hideelement('HelpBox')" onmouseover="showelement('HelpBox');">
-					<div class="HelpBoxContent" onclick="largeFont();" id="largerFontButton">Larger Font</div>
-					<div class="HelpBoxContent HeaderStuff" onclick="highContrast();" id="highContrastButton">Higher Contrast</div>
-					<div class="HelpBoxContent HeaderStuff">Fancy stuff</div>
+					<div class="HelpBoxContent" onclick="largeFont();" id="largerFontButton">Gro&szlig;e Schrift</div>
+					<div class="HelpBoxContent HeaderStuff" onclick="highContrast();" id="highContrastButton">Hoher Kontrast</div>
+					<div class="HelpBoxContent HeaderStuff" onclick="javascript:window.print();" id="printButton">Drucken</div>
 				</div>
 			</div>
 		</div>
