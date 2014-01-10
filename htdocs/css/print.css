@@ -1,0 +1,29 @@
+html{
+	font-family: Cambria;
+	height: 100%
+}
+
+#StartButton, #UpButtonContainer, #HelpBoxContainer {
+	display: none;
+}
+#Title {
+	margin-left: 130px;
+	text-decoration: underline;
+}
+footer{
+	display: none;
+}
+#Global{
+	background-color: #FFFFFF;
+	height:1000px;
+}
+#SmallBox1{
+	background-color: #FFFFFF
+	float: left;
+	height: 600px;
+	color:white;
+	width: auto;
+}
+.SmallBox2, #BigBox2{
+	display: none;
+}

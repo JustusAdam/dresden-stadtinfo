@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="./css/regularContrast.css" type="text/css">
 	<link rel="shortcut icon" href="./resources/images/D-letter.png" type="image/png">
 	
+	
 	<script type="text/javascript" src="http://www.openlayers.org/api/OpenLayers.js"></script>
 	<script type="text/javascript" src="http://www.openstreetmap.org/openlayers/OpenStreetMap.js"></script>
 	<script type="text/javascript" src="js/tom.js"></script> 
@@ -66,12 +67,12 @@
 				// Popup und Popuptext mit evtl. Grafik
 				var popuptext="<b><?php echo $heading;?></b>";
 				
-				var popuptext_fk = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=fk\"><b>Frauenkirche</b></a><br><i>Neumarkt, 01067 Dresden</i>";
-				var popuptext_so = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=so\"><b>Semperoper</b></a><br><i>Theaterplatz 2, 01067 Dresden</i>";
-				var popuptext_zw = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=zw\"><b>Zwinger</b></a><br><i>Sophienstra&szlig;e, 01067 Dresden </i>";
-				var popuptext_tu = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=tu\"><b>TU Dresden</b></a><br><i>Mommsenstra&szlig;e 9, 01069 Dresden</i>";
-				var popuptext_gg = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=gg\"><b>Gro&szlig;er Garten</b></a><br><i>01219 Dresden</i>";
-				var popuptext_bw = "<a href=\"http://projects.justusadam.com/dresden-stadtinfo/contentPage.php?dest=bw\"><b>Blaues Wunder</b></a><br><i>Loschwitzer Br&uuml;cke, 01326 Dresden</i>";
+				var popuptext_fk = "<a href=\"./contentPage.php?dest=fk\"><b>Frauenkirche</b></a><br><i>Neumarkt, 01067 Dresden</i>";
+				var popuptext_so = "<a href=\"./contentPage.php?dest=so\"><b>Semperoper</b></a><br><i>Theaterplatz 2, 01067 Dresden</i>";
+				var popuptext_zw = "<a href=\"./contentPage.php?dest=zw\"><b>Zwinger</b></a><br><i>Sophienstra&szlig;e, 01067 Dresden </i>";
+				var popuptext_tu = "<a href=\"./contentPage.php?dest=tu\"><b>TU Dresden</b></a><br><i>Mommsenstra&szlig;e 9, 01069 Dresden</i>";
+				var popuptext_gg = "<a href=\"./contentPage.php?dest=gg\"><b>Gro&szlig;er Garten</b></a><br><i>01219 Dresden</i>";
+				var popuptext_bw = "<a href=\"./contentPage.php?dest=bw\"><b>Blaues Wunder</b></a><br><i>Loschwitzer Br&uuml;cke, 01326 Dresden</i>";
 
 				OpenLayers.Lang.setCode('de');
 
