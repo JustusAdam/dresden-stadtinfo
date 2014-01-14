@@ -21,5 +21,5 @@
 		   </ul>";
 	$xpos = "13.733889";
 	$ypos = "51.053056";
-	$media1 = "media currently unavailable";
+	$media1 = " fopen('resources/ogg://zwinger_ogg_audio.ogg','r');";
 ?>
