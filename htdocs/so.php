@@ -18,5 +18,8 @@
 			</ul>";
 	$xpos = "13.735169";
 	$ypos = "51.054508";
-	$media1 = "media currently unavailable";
+	$media1 = '<audio controls>
+				<source src="resources/ogg/Semperoper_mp3_audio.mp3" type="audio/mpeg" />
+				<source src="resources/ogg/Semperoper_ogg_Audio.ogg" type="audio/ogg" />
+			</audio>';
 ?>

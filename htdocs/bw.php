@@ -15,5 +15,8 @@
 			</ul>";
 	$xpos = "13.810047";
 	$ypos = "51.053373";
-	$media1 = "media currently unavailable";
+	$media1 = '<audio controls>
+				<source src="resources/ogg/blaues_Wunder_mp3_Audio.mp3" type="audio/mpeg" />
+				<source src="resources/ogg/Blaues_wunder_ogg_Audio.ogg" type="audio/ogg" />
+			</audio>';
 ?>

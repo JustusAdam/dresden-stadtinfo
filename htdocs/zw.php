@@ -21,5 +21,8 @@
 		   </ul>";
 	$xpos = "13.733889";
 	$ypos = "51.053056";
-	$media1 = " fopen('resources/ogg://zwinger_ogg_audio.ogg','r');";
+	$media1 = '<audio controls>
+				<source src="resources/ogg/Zwinger_mp3_audio.mp3" type="audio/mpeg" />
+				<source src="resources/ogg/Zwinger_Ogg_Audio.ogg" type="audio/ogg" />
+			</audio>';
 ?>

@@ -20,5 +20,8 @@
 			</ul>";
 	$xpos = "13.741575";
 	$ypos = "51.051883";
-	$media1 = "media currently unavailable";
+	$media1 = '<audio controls>
+				<source src="resources/ogg/Frauenkirche_mp3_Audio.mp3" type="audio/mpeg" />
+				<source src="resources/ogg/Frauenkirche_ogg_Audio.ogg" type="audio/ogg" />
+			</audio>';
 ?>
