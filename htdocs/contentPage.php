@@ -87,17 +87,17 @@
 					displayProjection : new OpenLayers.Projection("EPSG:4326"),
 					controls : [
 						new OpenLayers.Control.LayerSwitcher(),
-						new OpenLayers.Control.Navigation(), //Mouse navigation is activated
-						new OpenLayers.Control.PanZoomBar(), //Zoom bar = top-left corner
-						new OpenLayers.Control.ScaleLine(), //Scale line = bottom-left corner
-						new OpenLayers.Control.MousePosition({ //shows EPSG coordinates = bottom-right corner
+						new OpenLayers.Control.Navigation(), //Mausnavigation/-benutzung ist aktiviert
+						new OpenLayers.Control.PanZoomBar(), //Zoomleiste = obere linke Ecke
+						new OpenLayers.Control.ScaleLine(), //Skalierbalken = untere linke Ecke
+						new OpenLayers.Control.MousePosition({ //zeigt EPSG-Koordinaten = rechte untere Ecke
 							prefix: '<a target="_blank" ' + 'href="http://spatialreference.org/ref/epsg/4326/">' + 'EPSG:4326</a>-Koordianten: '
 						}), 
-						new OpenLayers.Control.KeyboardDefaults(), //Keyboard can be used 
-						new OpenLayers.Control.NavToolbar(), //extra Navigation Toolbar = left
+						new OpenLayers.Control.KeyboardDefaults(), //Tastatur kann zur Kartenteuerung genutzt werden
+						new OpenLayers.Control.NavToolbar(), //extra Navigations-Toolbar (z.B. Bereich vergrößern) = links
 					],
 					maxExtent : new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
-					numZoomLevels : 18,
+					numZoomLevels : 18, //Anzahl der Zoomstufen
 					maxResolution : 156543,
 					units : 'meters'
 				});
@@ -126,8 +126,8 @@
 				var c3 = iconPOI.clone();
 				var c4 = iconPOI.clone();
 				var c5 = iconPOI.clone();
+				
 				//------- Position des Markers   .... Marker wird über Funktion 'addMarker()' in tom.js gesetzt....
-
 				addMarker(layerMarkers, lon, lat, popuptext, iconHaupt);
 				
 				<?php 

@@ -55,17 +55,17 @@
 			displayProjection: new OpenLayers.Projection("EPSG:4326"),
 			controls: [
 				new OpenLayers.Control.LayerSwitcher(),
-				new OpenLayers.Control.Navigation(), //Mouse navigation is activated
-				new OpenLayers.Control.PanZoomBar(), //Zoom bar = top-left corner
-				new OpenLayers.Control.ScaleLine(), //Scale line = bottom-left corner
-				new OpenLayers.Control.MousePosition({ //shows EPSG coordinates = bottom-right corner
+				new OpenLayers.Control.Navigation(), //Mausnavigation/-benutzung ist aktiviert
+				new OpenLayers.Control.PanZoomBar(), //Zoomleiste = obere linke Ecke
+				new OpenLayers.Control.ScaleLine(), //Skalierbalken = untere linke Ecke
+				new OpenLayers.Control.MousePosition({ //zeigt EPSG-Koordinaten = rechte untere Ecke
 					prefix: '<a target="_blank" ' + 'href="http://spatialreference.org/ref/epsg/4326/">' + 'EPSG:4326</a>-Koordianten: '
 				}), 
-				new OpenLayers.Control.KeyboardDefaults(), //Keyboard can be used 
-				new OpenLayers.Control.NavToolbar() //extra Navigation Toolbar = left
+				new OpenLayers.Control.KeyboardDefaults(), //Tastatur kann zur Karten-Steuerung benutzt werden
+				new OpenLayers.Control.NavToolbar() //extra Navigations-Toolbar (z.B. Bereich vergrößern) = links
 			],
 			maxExtent : new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
-			numZoomLevels : 18,
+			numZoomLevels : 18, //Anzahl der Zoomstufen
 			maxResolution : 156543,
 			units : 'meters'
 		});
@@ -109,6 +109,8 @@
 
 	//]]>
 		</script>
+		
+		<!-- Hilfe-Menü-Animationen -->
 		<script type="text/javascript">
 			function showelement(id){
 				box = document.getElementById(id);

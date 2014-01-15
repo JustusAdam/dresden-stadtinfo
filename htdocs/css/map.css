@@ -2,7 +2,6 @@
 	float:left;
 	width: 96%;
 	height: 400px;
-	/*background-color: #E6E6FA;*/
 	margin: 2%;
 	color: #3385FF;
 	z-index: 4;
@@ -10,13 +9,16 @@
 #Global{
 	height:730px;
 }
-#map { /* Karteneinbindungs-Formatierungen */
+
+/* Karteneinbindungs-Formatierungen */
+#map { 
   height: 690px;
   width: 100%; 
   
 }
 
-#map-c { /* Copyright auf der Karte links unten */
+/* Copyright auf der Karte links unten */
+#map-c { 
 	background-color: white;
 	opacity: 0.7; filter:Alpha(Opacity=50); /* Transparenz des Hintergrunds */
 	position: absolute;

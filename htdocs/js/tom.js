@@ -1,4 +1,7 @@
-/*** Functions ***/
+/*** Karten-Funktionen ***/
+/*** Quelle: http://wiki.openstreetmap.org/wiki/Die_JavaScript_Dateien ***/
+
+//Setzt den Zoom-Mittelpunkt auf die Koordinaten von lon und lat
 function jumpTo(lon, lat, zoom) {
     var x = Lon2Merc(lon);
     var y = Lat2Merc(lat);
@@ -6,16 +9,24 @@ function jumpTo(lon, lat, zoom) {
     return false;
 }
  
+//Berechnet die Longitude-Koordinate, die die OSM benötigt
 function Lon2Merc(lon) {
     return 20037508.34 * lon / 180;
 }
- 
+
+//Berechnet die Latitude-Koordinate, die die OSM benötigt 
 function Lat2Merc(lat) {
     var PI = 3.14159265358979323846;
     lat = Math.log(Math.tan( (90 + lat) * PI / 360)) / (PI / 180);
     return 20037508.34 * lat / 180;
 }
  
+/**
+  *	Fügt einen SVG-Marker namens 'icon' hinzu aus dem Layer 'layer' 
+  * und den Koordinaten 'lon' und 'lat'. Das Popup wird sofort angezeigt.
+  * Das Popup enthält den Text 'popupContentHTML'.
+  *
+  **/
 function addMarker(layer, lon, lat, popupContentHTML, icon) 
 {
  
@@ -54,6 +65,7 @@ function addMarker(layer, lon, lat, popupContentHTML, icon)
    
 }
 
+// Im Gegensatz zu addMarker wird das Popup nicht sofort nach dem Aufruf angezeigt.
 function addOnlyMarker(layer, lon, lat, popupContentHTML, icon) 
 {
  
@@ -87,10 +99,11 @@ function addOnlyMarker(layer, lon, lat, popupContentHTML, icon)
  
     layer.addMarker(marker);
     
-    //Diffrence: map.addPopup(feature.createPopup(feature.closeBox));  
+    //Unterschied zu addMarker(): map.addPopup(feature.createPopup(feature.closeBox));  
    
 }
- 
+
+// Berechnet die Kanten-Rundungen
 function getCycleTileURL(bounds) {
    var res = this.map.getResolution();
    var x = Math.round((bounds.left - this.maxExtent.left) / (res * this.tileSize.w));

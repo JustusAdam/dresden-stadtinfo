@@ -2,7 +2,6 @@
 	float:left;
 	width: 960px;
 	height: 400px;
-	/*background-color: #E6E6FA;*/
 	margin: 10px;
 	color: #3385FF;
 	z-index: 3;
@@ -43,13 +42,16 @@ img.Slider{
 .List1{
 	margin: 2%;
 }
-#map { /* Karteneinbindungs-Formatierungen */
+
+/* Karteneinbindungs-Formatierungen */
+#map { 
   height: 400px;
   width: 100%; 
   
 }
 
-#map-c { /* Copyright auf der Karte links unten */
+/* Copyright auf der Karte links unten */
+#map-c { 
 	background-color: white;
 	opacity: 0.7; filter:Alpha(Opacity=50); /* Transparenz des Hintergrunds */
 	position: absolute;
