@@ -22,7 +22,8 @@
 			</ul>";
 	$xpos = "13.763056";
 	$ypos = "51.0375";
-	$media1 = "<video width=\"480\" height=\"384\" controls>
-					<source src=\"./resources/video/gg.mp4\" type=\"video/mp4\">
-				</video>";
+	$media1 = '<video width="480" height="384" controls preload="none" autobuffer="false">
+					<source src="resources/video/TUDresden_mp4_480x384.MP4" type="video/mp4" />
+					<source src="resources/video/TUDresden_OGG_480x384.OGG" type="video/ogg" />
+				</video>';
 ?>
